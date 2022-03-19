@@ -1,0 +1,21 @@
+{
+  "name": "gulp-starter",
+  "version": "1.0.0",
+  "description": "simple gulpfile.js for sass and images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Murat Demir",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.49.9",
+    "gulp-sass": "^5.1.0",
+    "browser-sync": "^2.27.9",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-webp": "^4.0.1"
+  }
+}
