@@ -23,7 +23,7 @@ function style() {
   return (
     gulp
       // 1. where is my scss file
-      .src("./src/sass/**/*.scss")
+      .src("./src/sass/**/*.{scss,sass}")
       // 2. pass that file through sass compiler
       .pipe(sass().on("error", sass.logError))
       // 3. prefix compiler
@@ -41,7 +41,7 @@ function style() {
 function image() {
   return (
     gulp
-      // 1. where is my images
+      // 1. where are my images
       .src("./src/img/**/*.{jpg,png}")
       // 2. pass that images through imagemin optimizer
       .pipe(
@@ -79,7 +79,7 @@ function watch() {
       baseDir: "./",
     },
   });
-  gulp.watch("./src/sass/**/*.scss", style);
+  gulp.watch("./src/sass/**/*.{scss,sass}", style);
   gulp.watch("./*.html").on("change", browserSync.reload);
   gulp.watch("./src/img/**/*.{jpg,png}", gulp.series(image, webp));
   gulp.watch("./js/**/*.js").on("change", browserSync.reload);
